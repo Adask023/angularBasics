@@ -1,0 +1,11 @@
+<p>zad2forms works!</p>
+
+<input type="text" (input)="handleFormChange($event)" />
+<p>{{ form1 }}</p>
+
+<input type="text" [(ngModel)]="form2" />
+<p>{{ form2 }}</p>
+
+<button class="btn btn-primary" (click)="handleFormReset()" [disabled]="form2.length === 0">
+  reset
+</button>

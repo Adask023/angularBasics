@@ -1,0 +1,14 @@
+<p>zad3directives works!</p>
+<button class="btn btn-secondary" (click)="handleButtonClick()">
+  Display Details
+</button>
+
+<p *ngIf="showBlock">Hidden information</p>
+
+<div
+  *ngFor="let i of log; let counter = index"
+  [ngStyle]="{ backgroundColor: counter >= 5 ? 'blue' : 'transparent' }"
+  [ngClass]="{ whiteText: counter >= 5 }"
+>
+  <p>{{ i }}</p>
+</div>
